@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Expresiones Regulares</title>
+    <link rel="stylesheet" href="css/estiilo.css">
+    <script>
+        
+        function ER(){
+            var patron = /^[a-zA-Z0-9-_\.]+@[a-zA-Z0-9]+\.[a-z]{2,3}(\.[a-z]{2,3})?$/gm;
+            var valor = document.getElementById("E").value;
+            if(patron.test(valor))
+            {
+                alert("La direccion de correo es correcta");
+            }
+            else{
+                alert("Ingrese de nuevo el Email");
+            }
+        }
+    </script>
+    <script>
+                function ER2(){
+            var patron2 = /^[267]{1}[0-9]{7}$/;
+            var valor2 = document.getElementById("T").value;
+            if(patron2.exec(valor2))
+            {
+                alert("El numero de telefono es correcto");
+            }
+            else{
+                alert("Ingrese de nuevo el numero de telefono");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>FUNCIONES REGULARES</h1>
+    <br>
+    <p>
+        Las expresiones regulares son una serie de carácteres que forman un patrón, normalmente representativo de otro grupo de carácteres mayor, 
+        de tal forma que podemos comparar el patrón con otro conjunto de carácteres para ver las coincidencias. Las expresiones regulares estan 
+        disponibles en casi cualquier lenguaje de programación, pero aunque su sintaxis es relativamente uniforme, cada lenguaje usa su propio dialecto.
+    </p>
+    <h1>EJEMPLO 1</h1>
+    <p>En este ejemplo se usa la expresion regular test para "validar" un campo de un correo electronico</p>
+
+    <form onsubmit="ER()">  
+        <label for="email">Introduce el email</label>
+        <input type="text" id="E">
+        <input type="submit" id="A">
+        </form>
+
+        <h1>EJEMPLO 2</h1>
+        <p>En este ejemplo se usa la expresion regular un numero telefonico</p>
+
+    <form onsubmit="ER2()">  
+        <label for="telefono">Introduce el numero de telefono salvadoreño</label>
+        <input type="text" id="T" >
+        <input type="submit" id="B">
+    
+</form>
+</body>
+</html>
