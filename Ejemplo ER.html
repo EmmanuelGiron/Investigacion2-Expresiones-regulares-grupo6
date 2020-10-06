@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Expresiones Regulares</title>
-    <link rel="stylesheet" href="css/estiilo.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script>
         
         function ER(){
@@ -33,31 +38,48 @@
     </script>
 </head>
 <body>
-
-    <h1>FUNCIONES REGULARES</h1>
-    <br>
-    <p>
-        Las expresiones regulares son una serie de carácteres que forman un patrón, normalmente representativo de otro grupo de carácteres mayor, 
-        de tal forma que podemos comparar el patrón con otro conjunto de carácteres para ver las coincidencias. Las expresiones regulares estan 
-        disponibles en casi cualquier lenguaje de programación, pero aunque su sintaxis es relativamente uniforme, cada lenguaje usa su propio dialecto.
-    </p>
-    <h1>EJEMPLO 1</h1>
-    <p>En este ejemplo se usa la expresion regular test para "validar" un campo de un correo electronico</p>
-
-    <form onsubmit="ER()">  
-        <label for="email">Introduce el email</label>
-        <input type="text" id="E">
-        <input type="submit" id="A">
+     <div class="container">
+         <header class="jumbotron">
+            <h1>EXPRESIONES REGULARES</h1>
+         </header>
+         <div class="p-3 mb-2 bg-secondary text-white">
+            <div class="p-3 mb-2 bg-dark text-white">
+                <p class="lead">
+                    Las expresiones regulares son una serie de carácteres que forman un patrón, normalmente representativo de otro grupo de carácteres mayor, 
+                    de tal forma que podemos comparar el patrón con otro conjunto de carácteres para ver las coincidencias. Las expresiones regulares estan 
+                    disponibles en casi cualquier lenguaje de programación, pero aunque su sintaxis es relativamente uniforme, cada lenguaje usa su propio dialecto.
+                </p>
+            </div>
+           
+            <br>
+            <h1 class="display-4">EJEMPLO 1</h1>
+            <p class="text-white bg-dark">En este ejemplo se usa la expresion regular test para "validar" un campo de un correo electronico</p>
+        
+            <form onsubmit="ER()">  
+                <label for="email" class="lead">Introduce el email</label>
+                <input type="text" id="E">
+                <input class="btn btn-success" type="submit" id="A">
+                </form>
+        
+                <h1 class="display-4">EJEMPLO 2</h1>
+                <br>
+                <p class="text-white bg-dark">En este ejemplo se usa la expresion regular un numero telefonico</p>
+        
+            <form onsubmit="ER2()">  
+                <label for="telefono" class="lead">Introduce el numero de telefono salvadoreño</label>
+                <input type="text" id="T" >
+                <input  class="btn btn-success" type="submit" id="B">
+            
         </form>
-
-        <h1>EJEMPLO 2</h1>
-        <p>En este ejemplo se usa la expresion regular un numero telefonico</p>
-
-    <form onsubmit="ER2()">  
-        <label for="telefono">Introduce el numero de telefono salvadoreño</label>
-        <input type="text" id="T" >
-        <input type="submit" id="B">
+        <br>
+        <br>
+         </div>   
+        <footer class="p-3 mb-2 bg-light text-dark">
+            <center>
+                <h4>Hecho con bootstrap © Derechos reservados UDB 2020</h4>
+            </center>
+        </footer>
+     </div>
     
-</form>
 </body>
 </html>
